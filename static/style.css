@@ -1,0 +1,432 @@
+*,
+*::after,
+*::before {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+img,
+svg,
+canvas,
+video {
+  max-width: 100%;
+  display: block;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  outline: none;
+  background: none;
+  font: inherit;
+}
+
+input,
+label,
+select,
+textarea {
+  font: inherit;
+}
+
+ul,
+li {
+  list-style: none;
+}
+
+a {
+  font: inherit;
+  color: inherit;
+}
+
+:root {
+}
+
+body {
+  min-height: 100dvh;
+  position: relative;
+  isolation: isolate;
+
+  font-family: "Lato", sans-serif;
+}
+
+.flex {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+}
+
+html {
+  overflow: -moz-scrollbars-none;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+html::-webkit-scrollbar {
+  display: none;
+}
+
+.main {
+}
+
+.home {
+  min-height: 100dvh;
+  justify-items: center;
+  gap: 1rem;
+
+  background-image: linear-gradient(
+    0deg,
+    hsl(234deg 100% 17%) 0%,
+    hsl(232deg 86% 20%) 8%,
+    hsl(232deg 74% 24%) 17%,
+    hsl(231deg 66% 27%) 25%,
+    hsl(229deg 61% 30%) 33%,
+    hsl(228deg 56% 33%) 42%,
+    hsl(227deg 53% 36%) 50%,
+    hsl(226deg 50% 39%) 58%,
+    hsl(224deg 47% 42%) 67%,
+    hsl(223deg 44% 45%) 75%,
+    hsl(222deg 42% 49%) 83%,
+    hsl(221deg 43% 52%) 92%,
+    hsl(220deg 46% 55%) 100%
+  );
+}
+
+.logo {
+  gap: 0.5rem;
+}
+
+.logo__img {
+  width: 4rem;
+  height: 4rem;
+}
+
+.logo__txt {
+  font-size: 2rem;
+  color: #fff;
+}
+
+.upload {
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: center;
+
+  position: relative;
+}
+
+.upload__img-box {
+  gap: 2.5rem;
+  justify-items: center;
+
+  width: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.upload__img-icon {
+  gap: 0.25rem;
+  justify-items: center;
+
+  cursor: pointer;
+}
+
+.upload_img_logo {
+  width: 5rem;
+  height: 5rem;
+  fill: skyblue;
+}
+
+.upload__img-icon span {
+  font-size: 1.25rem;
+  font-weight: 700;
+
+  user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+}
+
+.progress {
+  width: 90%;
+  gap: 0rem;
+}
+
+.file__image {
+  flex: 1 1 auto;
+
+  /* display: flex;
+  justify-content: center; */
+}
+
+.file__image img {
+  width: 3.125rem;
+  height: 3.125rem;
+}
+
+.progress__report {
+  flex: 1 1 75%;
+  gap: 0.75rem;
+}
+
+.progress__text {
+  align-items: center;
+}
+
+.file-name {
+  font-size: 1.25rem;
+  color: #222;
+  font-weight: 600;
+
+  margin-right: auto;
+}
+
+.percentage {
+}
+
+.progress__status {
+}
+
+.progress__status > * {
+  font-size: 1.5rem;
+}
+
+.progress__status > *:first-child {
+  fill: hsl(142, 70%, 46%);
+}
+
+.progress__status > *:last-child {
+  fill: hsl(350, 89%, 60%);
+}
+
+.progress__bar {
+  width: 0%;
+  height: 0.5rem;
+  background-color: hsl(142, 70%, 46%);
+  border-radius: 0.5rem;
+}
+
+.file_size {
+  font-size: 0.95rem;
+  color: #222;
+}
+
+.upload__box {
+  flex: 1 1 1;
+  max-width: 500px;
+  height: 400px;
+}
+
+.upload__box > img {
+  width: 100%;
+  height: 100%;
+}
+
+.upload__box_one {
+}
+
+.upload__box_two {
+}
+
+.option {
+  width: 100%;
+  padding: 0.8rem 0rem;
+  font-size: 1.25rem;
+  border-top: 5px solid #182673;
+
+  display: block;
+  text-align: center;
+}
+
+.exit__btn {
+  background-color: hsl(0, 53%, 58%);
+}
+
+.download__btn {
+  text-decoration: none;
+  background-color: hsl(220, 46%, 55%);
+}
+
+.note {
+  background-color: #344cb7;
+  color: #fff;
+  width: 100%;
+  height: 100%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  text-align: center;
+}
+
+.note p {
+  font-size: 1.5rem;
+}
+
+.about {
+  padding: 4rem 1.5rem;
+  background-color: #d9eafd;
+}
+
+.content__box {
+  flex-wrap: wrap;
+  gap: 4rem;
+  margin-inline: 7rem;
+}
+
+.content__box_one {
+}
+
+.content__box_two {
+}
+
+.content__box_two .content__box_img {
+  order: -1;
+}
+
+.content__box_three {
+}
+
+.content__box_text {
+  gap: 1.75rem;
+  flex: 1 1 60%;
+  min-width: 250px;
+}
+
+.secondary--title {
+  font-size: 2.75rem;
+  color: #344cb7;
+}
+
+.primary--para {
+  font-size: 1.35rem;
+  line-height: 1.5;
+}
+
+.lists {
+  gap: 0.5rem;
+}
+
+.list {
+  font-size: 1.35rem;
+}
+
+.list__title {
+  font-weight: 600;
+}
+
+.content__box_img {
+  flex: 1 1 20%;
+  min-width: 300px;
+}
+
+.content__box_img img {
+  /* width: 50%; */
+  border-radius: 0.5rem;
+}
+
+.footer {
+  background-color: #344cb7;
+  padding: 1.25rem 1.5rem;
+  color: #fff;
+}
+
+.secondary--para {
+  text-align: center;
+  font-size: 1.5rem;
+  margin-bottom: 1.25rem;
+}
+
+.footer__container {
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.social__media {
+}
+
+.social__media p {
+  font-size: 1.35rem;
+}
+
+.footer__logo {
+  gap: 0.5rem;
+}
+
+.git {
+  justify-self: flex-end;
+}
+
+.git__logo {
+  font-size: 1.75rem;
+}
+
+.git p {
+  gap: 0.5rem;
+  font-size: 1.25rem;
+}
+
+.ver {
+  text-align: center;
+}
+
+/* Utilities Classes */
+.upload_dimension {
+  min-width: 500px;
+  height: 400px;
+  border-radius: 0.5rem;
+  outline: 0.25rem dashed #fff;
+  background-color: hsla(0, 0%, 100%, 0.85);
+}
+
+.hide_upload_area {
+  display: none;
+}
+
+.hide_upload_box {
+  display: none;
+}
+
+.progress_bar_container--hide {
+  display: none;
+}
+
+.progress__status--hide {
+  display: none;
+}
+
+.progress_per--hide {
+  display: none;
+}
+
+@media only screen and (hover: hover) {
+  .social__media p a,
+  .git p a,
+  .exit__btn,
+  .download__btn {
+    transition: color 0.3s, background 0.3s;
+  }
+
+  .social__media p a:hover,
+  .git p a:hover {
+    color: #ffeb00;
+  }
+
+  .exit__btn:hover {
+    background-color: hsla(0, 53%, 58%, 0.75);
+    color: #fff;
+  }
+
+  .download__btn:hover {
+    background-color: hsla(220, 46%, 55%, 0.75);
+    color: #fff;
+  }
+}

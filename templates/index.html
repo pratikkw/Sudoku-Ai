@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sudoku Ai</title>
+
+    <!-- Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="{{url_for('static', filename='style.css')}}" />
+
+    <!-- JS -->
+    <script src="{{ url_for('static', filename='script.js') }}" defer></script>
+  </head>
+  <body>
+    <main class="main">
+      <section class="section home grid">
+        <div class="logo flex">
+          <img class="logo__img" src="static/icons/ai__logo.svg" alt="" />
+          <span class="logo__txt">Sudoku Ai</span>
+        </div>
+
+        <div class="upload flex upload_dimension">
+          <input type="file" id="fileInput" hidden />
+          <div class="upload__img-box grid">
+            <div class="upload__img-icon grid">
+              <svg
+                viewBox="0 0 24 24"
+                class="_load-icon_vzxu7_85 upload_img_logo"
+              >
+                <path
+                  d="M19 7v3h-2V7h-3V5h3V2h2v3h3v2h-3zm-3 4V8h-3V5H5a2 2 0 00-2 2v12c0 1.1.9 2 2 2h12a2 2 0 002-2v-8h-3zM5 19l3-4 2 3 3-4 4 5H5z"
+                ></path>
+              </svg>
+              <span>Upload Sudoku</span>
+            </div>
+
+            <div class="progress flex progress_bar_container--hide">
+              <div class="file__image">
+                <img src="static/icons/06__upload_file_icon.png" alt="" />
+              </div>
+
+              <div class="progress__report grid">
+                <div class="progress__text flex">
+                  <p class="file-name">Sudoku.jpg</p>
+                  <span class="percentage">0%</span>
+                  <span class="progress__status">
+                    <ion-icon
+                      class="progress__status_done progress__status--hide"
+                      name="checkmark-circle"
+                    ></ion-icon>
+                    <ion-icon
+                      class="progress__status_fail progress__status--hide"
+                      name="close-circle"
+                    ></ion-icon>
+                  </span>
+                </div>
+                <div class="progress__bar"></div>
+                <p class="file_size">0 KB</p>
+              </div>
+            </div>
+          </div>
+          <div class="upload__box upload__box_one hide_upload_box">
+            <img src="static/normalblank.jpg" alt="" />
+            <button class="option exit__btn">Exit</button>
+          </div>
+          <div class="upload__box upload__box_two hide_upload_box">
+            <img src="static/normalblank.jpg" alt="" />
+            <a
+              href="static/solution/sudoku_solution.png"
+              download="sudoku_solution.png"
+              class="option download__btn"
+              >Download</a
+            >
+          </div>
+        </div>
+
+        <div class="note">
+          <p>
+            <span>Note:-</span>
+            Upload a clear, well-lit Sudoku image for the most accurate results.
+            <br />
+            Blurry, cropped, or distorted images may affect the detection and
+            solution quality.
+          </p>
+        </div>
+      </section>
+      <section class="section about">
+        <div class="content__box content__box_one flex">
+          <div class="content__box_text grid">
+            <h2 class="secondary--title">What is Sudoku Ai?</h2>
+            <p class="primary--para">
+              Sudoku Ai is an AI-powered application that scans and analyzes
+              Sudoku puzzles from images, detects errors, and provides accurate
+              solutions.
+            </p>
+          </div>
+          <div class="content__box_img">
+            <img src="static/images/05__ai.jpeg" alt="" />
+          </div>
+        </div>
+        <div class="content__box content__box_two flex">
+          <div class="content__box_text grid">
+            <h2 class="secondary--title">How to use?</h2>
+            <p class="primary--para">
+              Upload an image of your Sudoku puzzle, and Sudoku Ai will scan and
+              analyze it. The application will generate an accurate solution for
+              you.
+            </p>
+          </div>
+          <div class="content__box_img">
+            <img src="static/images/03__ai.jpeg" alt="" />
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <p class="secondary--para">
+        # Enjoy a seamless and mistake-free Sudoku experience!
+      </p>
+
+      <div class="footer__container flex">
+        <div class="social__media grid">
+          <p>
+            Created by
+            <a href="https://pratikkw.netlify.app/">Pratik Kesharwani</a>
+          </p>
+          <p>
+            Contact at
+            <a href="mailto: pratikkesharwani448@gmail.com"
+              >pratikkesharwani448@gmail.com</a
+            >
+          </p>
+        </div>
+
+        <div class="footer__logo grid">
+          <div class="logo flex">
+            <img class="logo__img" src="static/icons/ai__logo.svg" alt="" />
+            <span class="logo__txt">Sudoku Ai</span>
+          </div>
+
+          <div class="git">
+            <p class="flex">
+              Source on
+              <a href="">
+                <ion-icon class="git__logo" name="logo-github"></ion-icon>
+              </a>
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <p class="ver">SU 1.0</p>
+    </footer>
+    <!-- ICON -->
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
+  </body>
+</html>
